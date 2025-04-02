@@ -14,3 +14,5 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 
   return <SessionProvider>{children}</SessionProvider>;
 }
+
+//used to wrap my app with important global providers

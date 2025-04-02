@@ -20,7 +20,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/login');
+      router.push('/auth/login'); //to redirect user to login page if they are not logged in
     }
   }, [status, router]);
 
@@ -46,11 +46,13 @@ export default function DashboardPage() {
     }
   };
 
-  const handleTyping = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleTyping = async (e: React.ChangeEvent<HTMLInputElement>) => 
+    {
     const value = e.target.value;
     setSearchTerm(value);
 
-    if (value.length < 2) {
+    if (value.length < 2) //won't suggest for one letter
+         {
       setSuggestions([]);
       return;
     }

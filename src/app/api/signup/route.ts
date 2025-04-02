@@ -14,3 +14,6 @@ export async function POST(req: Request) {
   await db.collection('users').insertOne({ email, password });
   return NextResponse.json({ message: 'User created' });
 }
+
+
+//frontend where the user actually signup

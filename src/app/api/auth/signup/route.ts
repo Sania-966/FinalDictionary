@@ -15,3 +15,8 @@ export async function POST(req: Request) {
   await db.collection('users').insertOne({ email, password });
   return NextResponse.json({ message: 'User created' });
 }
+
+
+
+
+//for user details to get saved in mongoDB
